@@ -95,7 +95,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
-    background-image: linear-gradient(90deg,#5f432f,#F5E6CA);
+    background-image: linear-gradient(90deg,#695343,#fde8c2);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -138,7 +138,8 @@
 }
 .info-box:hover{
     transform: scale(0.9);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 5px 10px rgba(245, 222, 179, 0.196);
+    border: 2px solid rgba(212, 212, 212, 0.331);
 }
 @media (max-width:768px){
     .animal-card{
