@@ -47,7 +47,7 @@ function displayAnimalCard(animal) {
     resultSection.innerHTML = `
     <div class="animal-card">
         <h3 class="animal-name">
-            ${animal.name || "Unknown"}
+            ${animal.name || "Unknown?"}
         </h3>
         <div class="info-box">
             <i class="fa-solid fa-address-card"></i>
