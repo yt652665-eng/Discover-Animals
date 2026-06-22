@@ -1,0 +1,209 @@
+.hero-section {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(114, 114, 114, 0.5), rgba(105, 105, 105, 0.5)), url("../image/ai-generated-black-panther-mountain-forest-wildlife.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.animals {
+    opacity: 55%;
+}
+.overlay {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, .45);
+    padding: 20px;
+}
+.content {
+    max-width: 700px;
+}
+.content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+.input-group {
+    max-width: 444px;
+    margin-inline: auto;
+}
+.input-group .form-control {
+    height: 50px;
+    font-size: 1rem;
+}
+.input-group .btn {
+    font-size: 1rem;
+}
+.result-section {
+    min-height: 100vh;
+    background-color: #f5f1e8;
+}
+.result-section h3 {
+    
+}
+/* Tablet */
+@media (max-width: 992px) {
+    .hero-section,
+    .overlay,
+    .result-section {
+        min-height: 50vh;
+    }
+    .content h1 {
+        font-size: 3rem;
+    }
+    .result-section h2 {
+        font-size: 2.2rem;
+        padding: 40px 20px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:768px){
+    .hero-section {
+        background-position: end;
+    }
+}
+/* Mobile */
+@media (max-width: 576px) {
+    .content h1 {
+        font-size: 2.3rem;
+    }
+    .content p {
+        font-size: 1rem;
+    }
+    .result-section h2 {
+        font-size: 1.8rem;
+    }
+    .br{
+        display: none;
+    }
+}
+.animal-card{
+    width: 80%;
+    max-width: 530px;
+    margin:auto;
+    margin-top: 25px;
+    background-color: #474240;
+    border-radius: 25px;
+    padding: 25px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.animal-name{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background-image: linear-gradient(90deg,#5f432f,#F5E6CA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+.scientific-name{
+    color: #d8d8d8;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.info-box{
+    background-color: #46413c;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid rgba(128, 128, 128, 0.189);
+}
+.info-box i{
+    font-size: 1.1rem;
+    color: #f0d9a7;
+}
+.info-box span{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #cfcfcf;
+}
+.info-box h5{
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff8dc;
+}
+.info-box:hover{
+    transform: scale(0.9);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.24);
+}
+@media (max-width:768px){
+    .animal-card{
+        width: 95%;
+        padding: 20px;
+        margin-top: 50px;
+    }
+    .animal-name{
+        font-size: 1.5rem;
+    }
+    .scientific-name{
+        font-size: .9rem;
+    }
+    .info-box{
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    .info-box i{
+        font-size: 1rem;
+    }
+    .info-box span{
+        font-size: .65rem;
+    }
+    .info-box h5{
+        font-size: .9rem;
+    }
+}
+/* loader */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display:grid;
+  -webkit-mask: conic-gradient(from 15deg,#0000,#000);
+  animation: l26 1s infinite steps(12);
+}
+.loader,
+.loader:before,
+.loader:after{
+  background:
+    radial-gradient(closest-side at 50% 12.5%,
+     #e69f08 96%,#0000) 50% 0/20% 80% repeat-y,
+    radial-gradient(closest-side at 12.5% 50%,
+     #eba611 96%,#0000) 0 50%/80% 20% repeat-x;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  transform: rotate(30deg);
+}
+.loader:after {
+  transform: rotate(60deg);
+}
+@keyframes l26 {
+  100% {transform:rotate(1turn)}
+}
+.animal-card{
+    animation: show 1.5s;
+}
+@keyframes show{
+    10%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
