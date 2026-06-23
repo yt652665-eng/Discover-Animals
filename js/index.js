@@ -93,6 +93,7 @@ function displayAnimalCard(animal) {
 }
 //? Events
 searchBtn.addEventListener("click", getAnimalName)
+// todo click ENTER
 input.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
         getAnimalName()
